@@ -182,7 +182,7 @@ def main():
         values=valores,
         kwargs_slices=dict(facecolor="#1ec180",
                            edgecolor="#000000", zorder=2, linewidth=2),
-        kwargs_params=dict(color="#000000", fontsize=20,
+        kwargs_params=dict(color="#000000", fontsize=25,
                            weight='bold', va="center"),
         kwargs_values=dict(color="#000000", fontsize=20, weight='bold', zorder=6, bbox=dict(
             edgecolor="#04f5ff", facecolor="#04f5ff",
@@ -196,6 +196,13 @@ def main():
 
     st.subheader("Estadísticas de los arqueros estandarizadas cada 90'.")
     st.dataframe(arqueros90)
+    
+    st.markdown(
+    """
+    Me gustaría agradecer a [Lanus Stats](https://www.youtube.com/@LanusStats/videos) y a [McKay Johns](https://www.youtube.com/@McKayJohns) por sus aportes a la comunidad.
+    """
+)
+
 
 
 if __name__ == "__main__":
