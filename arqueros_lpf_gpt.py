@@ -122,7 +122,7 @@ def main():
     arqueros100['Goles en contra'] = (
         arqueros90['Goles en contra'].rank(pct=True) * 100).astype(int)
     arqueros100['PSxG'] = (arqueros90['PSxG'].rank(pct=True) * 100).astype(int)
-    arqueros100['Remates (al arco) en contra'] = (
+    arqueros100['Remates (al\narco) en contra'] = (
         arqueros90['Remates (al arco) en contra'].rank(pct=True) * 100).astype(int)
     arqueros100['Atajadas'] = (
         arqueros90['Atajadas'].rank(pct=True) * 100).astype(int)
@@ -155,7 +155,7 @@ def main():
         return
 
     # Convertir datos del arquero a una serie de enteros
-    datosradar = ['Goles en contra', 'PSxG', 'Remates (al arco) en contra', 'Atajadas', 'Pases intentados',
+    datosradar = ['Goles en contra', 'PSxG', 'Remates (al\narco) en contra', 'Atajadas', 'Pases intentados',
                   'Distancia promedio\nde pase', 'Distancia promedio\nde saque de arco',
                   'Centros cortados', 'Acciones defensivas\nfuera del área', 'Goles evitados']
 
@@ -182,12 +182,15 @@ def main():
         values=valores,
         kwargs_slices=dict(facecolor="#1ec180",
                            edgecolor="#000000", zorder=2, linewidth=2),
-        kwargs_params=dict(color="#000000", fontsize=25,
+        kwargs_params=dict(color="#000000", fontsize=30,
                            weight='bold', va="center"),
         kwargs_values=dict(color="#000000", fontsize=20, weight='bold', zorder=6, bbox=dict(
             edgecolor="#04f5ff", facecolor="#04f5ff",
             boxstyle="round,pad=0.2", lw=2)),
         param_location=105)
+    
+    ax.text(0.5, 1.12, "Rendimiento de Cole Palmer dentro de las cinco grandes ligas de Europa (23/24)",
+        ha='center', va='center', weight='bold', fontsize=14, fontfamily='Verdana', color='white', transform=ax.transAxes)
 
     st.pyplot(fig)
 
