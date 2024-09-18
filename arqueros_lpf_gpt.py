@@ -193,9 +193,6 @@ def main():
             boxstyle="round,pad=0.2", lw=2)),
         param_location=105)
     
-    ax.text(0.5, 1.12, "Rendimiento de Cole Palmer dentro de las cinco grandes ligas de Europa (23/24)",
-        ha='center', va='center', weight='bold', fontsize=14, fontfamily='Verdana', color='white', transform=ax.transAxes)
-
     st.pyplot(fig)
 
     st.write("###### Referencias:")
