@@ -112,6 +112,8 @@ def main():
     arqueros90['Acciones defensivas fuera del área'] = arqueros['Acciones defensivas fuera del área'] / arqueros['90s']
     arqueros90['Goles evitados'] = arqueros['Goles evitados'] / arqueros['90s']
 
+    arqueros90 = arqueros90.round(2)
+
     # Crea el DataFrame con los datos normalizados
     arqueros100 = pd.DataFrame()
     arqueros100['Jugador'] = arqueros['Jugador']
@@ -143,8 +145,10 @@ def main():
     st.write("###### Los datos fueron normalizados cada 90' y luego estandarizados en percentiles. Debajo del gráfico pueden encontrar la tabla para poder contextualizar la información. Se descartaron a los jugadores que no sumaron más de 180 minutos.")
     st.write("Un percentil es una medida estadística para comparar resultados, nos permite saber cómo está situado un valor en función de una muestra.")
 
+     st.write("###### X: @robaboian_")
+
     arquero_nombre = st.selectbox(
-        'Arquero:', arqueros100['Jugador'].sort_values().unique(), index=None)
+        'Arqueros:', arqueros100['Jugador'].sort_values().unique(), index=None)
 
     # Filtrar los datos del arquero seleccionado
     arquero = arqueros100[arqueros100['Jugador'] == arquero_nombre]
@@ -182,7 +186,7 @@ def main():
         values=valores,
         kwargs_slices=dict(facecolor="#1ec180",
                            edgecolor="#000000", zorder=2, linewidth=2),
-        kwargs_params=dict(color="#000000", fontsize=30,
+        kwargs_params=dict(color="#000000", fontsize=25,
                            weight='bold', va="center"),
         kwargs_values=dict(color="#000000", fontsize=20, weight='bold', zorder=6, bbox=dict(
             edgecolor="#04f5ff", facecolor="#04f5ff",
@@ -202,10 +206,10 @@ def main():
     Me gustaría agradecer a [Lanus Stats](https://www.youtube.com/@LanusStats/videos) y a [McKay Johns](https://www.youtube.com/@McKayJohns) por sus aportes a la comunidad.
     """)
     
-    st.subheader("Estadísticas de los arqueros estandarizadas cada 90'.")
+    st.subheader("Estadísticas de los arqueros estandarizadas cada 90'")
     st.dataframe(arqueros90)
 
-    st.write("###### X: @robaboian_")
+   
 
     
     
