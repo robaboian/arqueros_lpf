@@ -141,7 +141,7 @@ def main():
     arqueros100['Goles evitados'] = (
         arqueros90['Goles evitados'].rank(pct=True) * 100).astype(int)
 
-    st.header("Pizza Plot de arqueros de la Liga Profesional de Fútbol 2024")
+    st.header("Pizza Plots: Arqueros de la Liga Profesional de Fútbol 2024")
     st.write("###### Los datos fueron normalizados cada 90' y luego estandarizados en percentiles. Debajo del gráfico pueden encontrar la tabla para poder contextualizar la información. Se descartaron a los jugadores que no sumaron más de 180 minutos.")
     st.write("Un percentil es una medida estadística para comparar resultados, nos permite saber cómo está situado un valor en función de una muestra.")
 
