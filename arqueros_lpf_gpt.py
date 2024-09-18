@@ -192,7 +192,7 @@ def main():
     st.pyplot(fig)
 
     st.write("###### Referencias:")
-    st.write("###### PSxG: Índice de expectativa de gol post-remate. Referencia a la peligrosidad de los remates al arco recibidos. | Goles evitados: Se calcula por la diferenia entre los goles en contra y el PSxG.")
+    st.write("###### PSxG: Índice de expectativa de gol post-remate. Referencia a la peligrosidad de los remates al arco recibidos. | Goles evitados: Se calcula por la diferencia entre los goles en contra y el PSxG.")
 
     st.subheader("Estadísticas de los arqueros estandarizadas cada 90'.")
     st.dataframe(arqueros90)
