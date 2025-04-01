@@ -3,6 +3,7 @@ import LanusStats as ls
 import pandas as pd
 from mplsoccer import PyPizza
 
+st.cache_data.clear()
 
 def main():
     # Inicializa el scraper
